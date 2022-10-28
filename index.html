@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="file:///Users/harrypotter/.bitnami/stackman/machines/xampp/volumes/root/htdocs/code/drum-pad/img/favicon-32x32.png">
+    <title>Drum-Pad by Fernando Franz</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top-menu">
+            <div id="led" class="led--off"></div>
+            <div class="screen">
+                <i class="fa fa-chevron-up"></i>
+                <label>DRUM PAD - Fernando Franz</label>
+                <br>
+                <label>1: Basic Pack</label>
+                <i class="fa fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="keys">
+            <div data-key="q" class="key">
+                <kbd>Q</kbd>
+                <span class="sound">Clap</span>
+            </div>
+            <div data-key="w" class="key">
+                <kbd>W</kbd>
+                <span class="sound">Hi-Hat</span>
+            </div>
+            <div data-key="e" class="key">
+                <kbd>E</kbd>
+                <span class="sound">Perc 1</span>
+            </div>
+            <div data-key="r" class="key">
+                <kbd>R</kbd>
+                <span class="sound">Perc 2</span>
+            </div>
+            <div data-key="t" class="key">
+                <kbd>T</kbd>
+                <span class="sound">Perc 3</span>
+            </div>
+            <div data-key="a" class="key">
+                <kbd>A</kbd>
+                <span class="sound">Kick</span>
+            </div>
+            <div data-key="s" class="key">
+                <kbd>S</kbd>
+                <span class="sound">Kick + Sound</span>
+            </div>
+            <div data-key="d" class="key">
+                <kbd>D</kbd>
+                <span class="sound">Snare</span>
+            </div>
+            <div data-key="f" class="key">
+                <kbd>F</kbd>
+                <span class="sound">Sound #1</span>
+            </div>
+            <div data-key="g" class="key">
+                <kbd>G</kbd>
+                <span class="sound">Sound #2</span>
+            </div>
+        </div>
+    </div>
+    <audio data-key="q" src="file:///Users/harrypotter/.bitnami/stackman/machines/xampp/volumes/root/htdocs/code/drum-pad/sounds/clap.wav"></audio>
+    <audio data-key="w" src="file:///Users/harrypotter/.bitnami/stackman/machines/xampp/volumes/root/htdocs/code/drum-pad/sounds/hihat.m4a"></audio>
+    <audio data-key="e" src="file:///Users/harrypotter/.bitnami/stackman/machines/xampp/volumes/root/htdocs/code/drum-pad/sounds/percussion.wav"></audio>
+    <audio data-key="r" src="file:///Users/harrypotter/.bitnami/stackman/machines/xampp/volumes/root/htdocs/code/drum-pad/sounds/percz.wav"></audio>
+    <audio data-key="t" src="file:///Users/harrypotter/.bitnami/stackman/machines/xampp/volumes/root/htdocs/code/drum-pad/sounds/percz_bubble.wav"></audio>
+    <audio data-key="a" src="file:///Users/harrypotter/.bitnami/stackman/machines/xampp/volumes/root/htdocs/code/drum-pad/sounds/kick.wav"></audio>
+    <audio data-key="s" src="file:///Users/harrypotter/.bitnami/stackman/machines/xampp/volumes/root/htdocs/code/drum-pad/sounds/kick_melodic.wav"></audio>
+    <audio data-key="d" src="file:///Users/harrypotter/.bitnami/stackman/machines/xampp/volumes/root/htdocs/code/drum-pad/sounds/snare.wav"></audio>
+    <audio data-key="f" src="file:///Users/harrypotter/.bitnami/stackman/machines/xampp/volumes/root/htdocs/code/drum-pad/sounds/sound_2.wav"></audio>
+    <audio data-key="g" src="file:///Users/harrypotter/.bitnami/stackman/machines/xampp/volumes/root/htdocs/code/drum-pad/sounds/gun.wav"></audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
