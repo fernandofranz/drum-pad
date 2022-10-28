@@ -82,6 +82,7 @@ body{
     height: 10rem;
     width: 10rem;
     background: #2b2b2d;
+    border-bottom: 2px solid #FCE64D;
 }
 .keys span{
     position: absolute;
