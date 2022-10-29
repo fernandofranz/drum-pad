@@ -17,10 +17,14 @@ body{
     background: #222224;
     box-shadow: 5px 5px 10px #222;
 }
-.top-menu{
+.top-menu-top{
     position: relative;
     background: #2D2D2D;
-    margin-bottom: 1rem;
+    border-bottom: 2px solid #3f3f3f;
+}
+.top-menu-sub{
+    background: #2D2D2D;
+    display: flex;
 }
 .screen{
     position: relative;
@@ -32,6 +36,9 @@ body{
     margin: 0 auto;
     font-family: 'Unica One';
     text-align: center;
+}
+.screen p{
+    letter-spacing: .6rem;
 }
 .screen .fa-chevron-up{
     position: absolute;
@@ -46,6 +53,31 @@ body{
 .fa-chevron-up:hover, .fa-chevron-down:hover{
     cursor: pointer;
     color: #FCE64D;
+}
+#record{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: .5rem;
+    margin-left: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.recording{
+    background-color: #ff4848;
+    box-shadow: 0 0 20px red;
+}
+.no-recording{
+    background-color:#aa0000;
+}
+.play{
+    padding: .45rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    cursor:pointer;
+}
+.fa-play{
+    pointer-events: none;
+    color: #ff4848;
 }
 .led--off{
     border-radius: 50%;

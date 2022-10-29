@@ -5,20 +5,76 @@ const screenArrowUp = document.getElementById(`arrow-up`);
 screenArrowUp.addEventListener("click", arrow);
 const screenArrowDown = document.getElementById(`arrow-down`);
 screenArrowDown.addEventListener("click", arrow);
+const recordButton = document.getElementById(`record`);
+const playButton = document.getElementById(`play`);
+recordButton.addEventListener("click", record)
+playButton.addEventListener("click", playRecording)
 
+
+const displayKeys = [];
+
+
+let grabando = false;
+function record(){
+    
+    if(grabando === true) {
+        grabando = false;
+        recordButton.className = "no-recording"
+    } else if (grabando === false) {
+        grabando = true;
+        recordButton.className = "recording"
+    }
+    console.log(grabando)
+}
+function playRecording(){
+    let pista;
+    if (localStorage.getItem("pista") === null) {
+        pista = [];
+        console.log("Record something biatch!")
+    } else {
+        pista = JSON.parse(localStorage.getItem("pista"));
+        pista.forEach((sound, i) => {
+            setTimeout(() => {
+                console.log(sound);
+            }, i*1000);
+        })
+    }
+}
 function playSound(e) {
     const audio = document.querySelector(`audio[data-key="${e.key}"]`);
     const key = document.querySelector(`.key[data-key="${e.key}"]`);
     const led = document.getElementById(`led`);
+    const screen = document.getElementById(`screen-playing`);
     if(!key) return;
+    
+    if (grabando === true){
+        let pista;
+        if (localStorage.getItem("pista") === null) {
+            pista = [];
+        } else {
+            pista = JSON.parse(localStorage.getItem("pista"));
+        }
+        const sound = [];
+        sound[0] = (e.key);
+        sound[1] = Date.now();
+        
+        pista.push(sound);
+        window.localStorage.setItem("pista", JSON.stringify(pista));
+    }
+    displayKeys.push(e.key)
+    const displayLastKeys = displayKeys.slice(Math.max(displayKeys.length - 10, 1))
+    screen.innerText = displayLastKeys.join('');
     key.classList.add('playing');
     led.classList.add('led--on');
     audio.currentTime = 0;
     audio.play();
+    //
 }
+//Removes PLAYING class
 function removePressed(e) {
     const key = document.querySelector(`.key[data-key = "${e.key}"]`);  
     const led = document.getElementById(`led`);
+    if(!key) return;
     key.classList.remove('playing');
     led.className = `led--off`
 }
