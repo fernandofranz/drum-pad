@@ -19,11 +19,11 @@ body{
 }
 .top-menu-top{
     position: relative;
-    background: #2D2D2D;
+    background: #13171B;
     border-bottom: 2px solid #3f3f3f;
 }
 .top-menu-sub{
-    background: #2D2D2D;
+    background: #13171B;
     display: flex;
 }
 .screen{
@@ -54,30 +54,51 @@ body{
     cursor: pointer;
     color: #FCE64D;
 }
+#track-screen{
+    font-family: 'Unica One';
+    display: flex;
+    color: #B5C9DF;
+    height: 2.5rem;
+    width: 17rem;
+    text-transform: uppercase;
+}
 #record{
     width: 1.5rem;
     height: 1.5rem;
     margin: .5rem;
     margin-left: 2rem;
-    border-radius: 50%;
     cursor: pointer;
+    background-color: #B5C9DF;
 }
-.recording{
-    background-color: #ff4848;
-    box-shadow: 0 0 20px red;
+#record:hover{
+    background-color: #FCE64D;
 }
 .no-recording{
-    background-color:#aa0000;
+    border-radius: 50%;
+}
+.recording{
+    border-radius: 5px;
+    color: red;
 }
 .play{
-    padding: .45rem;
+    padding: 0 .25rem;
     font-size: 1.5rem;
-    line-height: 1.5rem;
+    line-height: 2.5rem;
     cursor:pointer;
 }
-.fa-play{
+.fa-play, .fa-rotate-right{
     pointer-events: none;
-    color: #ff4848;
+    color: #B5C9DF;
+}
+.restart{
+    padding: 0 .25rem;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    cursor:pointer;
+}
+#track-screen label{
+    padding: 0 1rem;
+    line-height: 2.5rem;
 }
 .led--off{
     border-radius: 50%;
